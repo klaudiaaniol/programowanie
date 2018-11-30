@@ -236,18 +236,23 @@ scanf_s(" %d", &x);
 	return 0;
 */	
 //zadanie2.5
-int x;
+int x = 0;
+
 printf("Podaj liczbe:");
 scanf_s("%d", &x);
-//if (x % 2 == !0) continue; 
-	if (x > 0)
-		printf("liczba jest wieksza od 0");
+for (int i = 0; i < 1; i++)
+{
+	if (x % 2 == 0)
+		printf("liczba jest parzysta\n");
+	continue;
 
-	if (x < 0)
-		printf("liczba jest mniejsza od 0");
+	if (x % 2 != 0)
+		break;
 
-	if (x == 0)
-		printf("podales wartosc rowna 0"); 
+	if (x == 40)
+		break;
+}
+
 system("pause");
 return 0;
 //zadanie2.6
