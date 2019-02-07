@@ -164,7 +164,6 @@ int main() {
 //zad 1.2
 /*
 typedef struct Student Student;
-typedef struct Node Node;
 struct Student
 {
 	int Age;
@@ -185,7 +184,6 @@ Student* StudentCreate(int age, int height, int semestr)
 void PrintStudent(Student *stu)
 {
 	printf("Wiek: %dlat\nSemestr: %d\nWysokosc %dcm\n", stu->Age, stu->Semester, stu->Height);
-
 }
 bool AreEqueal(Student * stu1, Student * stu2)
 {
@@ -290,7 +288,7 @@ main()
 	}
 	fclose_s(fp);
 	fp = fopen_s("numbers.txt", "r");
-	printf("\n\n Dane ktore zostaly zapisane do pliku to:");
+	printf("\n\n dane spisane do pliku:");
 	while (fscanf_s(z, "%d", &z) != EOF)
 	{
 		printf("%d ", z);
@@ -301,7 +299,7 @@ main()
 */
 //zad 3.2
 /*
-main()
+int main()
 {
 	int u;
 	FILE *fp;
@@ -317,16 +315,18 @@ main()
 */
 
 //zad3.3
-main()
+/*
+
+int main()
 	{
 		int k, l, m;
 		int	data;
-		FILE *fp;
-		fp = fopen("numbers.txt", "r");
-		FILE *fp2;
-		fp2 = fopen("sorted.txt", "w");
-		int array[sizeof(fp)];
-		for (k = 0; fscanf(fp, "%d", &data) != EOF; k++)
+		FILE *a;
+		a = fopen_s("numbers.txt", "r");
+		FILE *a2;
+		a2 = fopen_s("sorted.txt", "w");
+		int array[sizeof(a)];
+		for (k = 0; fscanf_s(a, "%d", &data) != EOF; k++)
 		{
 			array[k] = data;
 		}data = array[k];
@@ -345,12 +345,12 @@ main()
 				}
 
 			}
-			fclose(fp);
-			fclose(fp2);
+			fclose_s(a);
+			fclose_S(a2);
 		}
 
 	}
 	system("pause");
 	return 0;
 }
-}
+*/
